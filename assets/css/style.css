@@ -2076,4 +2076,8 @@ a:visited:hover, a:hover, a:focus, button, button:hover {
 
 
 
-
+@media only screen and (max-width: 600px) {
+    .input-wrap {
+        margin: 0 0 0px;
+    }
+}
