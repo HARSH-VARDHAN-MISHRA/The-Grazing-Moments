@@ -2,7 +2,7 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Manrope:wght@200..800&family=Merienda:wght@300..900&display=swap");
 :root {
-    --rac-primary-color: #ee2e2e;
+    --rac-primary-color: #03463b;
     --rac-font-color: #b4b4b4;
     --rac-white-color: #ffffff;
     --rac-black-color: #292929;
@@ -11,7 +11,7 @@
     --rac-transition: all 0.3s;
     --rac-box-shadow: 0 0 20px 0 rgba(62, 28, 131, 0.1);
 
-    --rac-heading-color: #ee2e2e;
+    --rac-heading-color: #03463b;
     --rac-subheading-color: #292929;
     --rac-link-hover-color: #ff5858;
 }
@@ -766,6 +766,7 @@ p {
 
 .rac_about_text p {
     margin-top: 20px;
+    color: var(--rac-heading-color);
 }
 
 .rac_about_bottom {
@@ -783,6 +784,9 @@ p {
 .rac_about_name h4 {
     color: var(--rac-primary-color);
     margin: 10px 0 5px;
+}
+.rac_about_name p {
+    color: var(--rac-heading-color);
 }
 
 .rac_about_bottom_img {
