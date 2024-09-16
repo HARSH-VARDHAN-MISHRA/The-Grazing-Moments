@@ -307,6 +307,7 @@ textarea {
     font-weight: 600;
     text-transform: capitalize;
     min-width: 150px;
+    border: none;
 }
 
 .cat-btn::before {

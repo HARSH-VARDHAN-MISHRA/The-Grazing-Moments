@@ -361,3 +361,104 @@ Purchase: http://themeforest.net/user/kamleshyadav
     control.init();
 
 })(jQuery);
+
+
+
+// ========== serviceForm ========= 
+const form = document.getElementById('serviceForm');
+const result = document.getElementById('serviceFormResult');
+
+form.addEventListener('submit', function(e) {
+    const formData = new FormData(form);
+    e.preventDefault();
+
+    const object = Object.fromEntries(formData);
+    const json = JSON.stringify(object);
+
+    result.innerHTML = `<div class="alert alert-warning" role="alert">
+  Please wait...
+</div>`
+
+    fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: json
+        })
+        .then(async (response) => {
+            let json = await response.json();
+            if (response.status == 200) {
+                result.innerHTML = `<div class="alert alert-success" role="alert">
+  ${json.message}
+</div>`;
+            } else {
+                console.log(response);
+                result.innerHTML = json.message;
+            }
+        })
+        .catch(error => {
+            console.log(error);
+            // result.innerHTML = "Something went wrong!";
+            result.innerHTML = `<div class="alert alert-danger" role="alert">
+  Something went wrong!
+</div>`;
+        })
+        .then(function() {
+            form.reset();
+            setTimeout(() => {
+                result.style.display = "none";
+            }, 3000);
+        });
+});
+
+
+// ========== Contact Form ========= 
+// const contactForm = document.getElementById('contactForm');
+// const contactResult = document.getElementById('contactFormResult');
+
+// contactForm.addEventListener('submit', function(e) {
+//     const formData = new FormData(form);
+//     e.preventDefault();
+
+//     const object = Object.fromEntries(formData);
+//     const json = JSON.stringify(object);
+
+//     contactResult.innerHTML = `<div class="alert alert-warning" role="alert">
+//   Please wait...
+// </div>`
+
+//     fetch('https://api.web3forms.com/submit', {
+//             method: 'POST',
+//             headers: {
+//                 'Content-Type': 'application/json',
+//                 'Accept': 'application/json'
+//             },
+//             body: json
+//         })
+//         .then(async (response) => {
+//             let json = await response.json();
+//             if (response.status == 200) {
+//                 contactResult.innerHTML = `<div class="alert alert-success" role="alert">
+//   ${json.message}
+// </div>`;
+//             } else {
+//                 console.log(response);
+//                 contactResult.innerHTML = json.message;
+//             }
+//         })
+//         .catch(error => {
+//             console.log(error);
+//             // contactResult.innerHTML = "Something went wrong!";
+//             contactResult.innerHTML = `<div class="alert alert-danger" role="alert">
+//   Something went wrong!
+// </div>`;
+//         })
+//         .then(function() {
+//             form.reset();
+//             setTimeout(() => {
+//                 contactResult.style.display = "none";
+//             }, 3000);
+//         });
+// });

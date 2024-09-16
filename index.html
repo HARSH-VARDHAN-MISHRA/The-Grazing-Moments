@@ -644,59 +644,64 @@
                                 </div>
                             </div>
                             <div class="cat-booking-from-inner">
-                                <div class="row">
+                                <form class="row" action="https://api.web3forms.com/submit" method="POST" id="serviceForm">
+                                    <input type="hidden" name="access_key" value="3f8e8b74-7891-42eb-aff4-e033b68161d7">
 
 
                                     <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
                                         <div class="input-wrap">
-                                            <select name="" id="" class="nice-selection">
-                                                <option value="0">Event Type</option>
-                                                <option value="1">Big Event</option>
-                                                <option value="1">Small Event</option>
+                                            <select  name="Event" required  id="" class="nice-selection">
+                                                <option value="Event Type">Event Type</option>
+                                                <option value="Big Event">Big Event</option>
+                                                <option value="Small Event">Small Event</option>
                                             </select>
                                         </div>
                                     </div>
                                     <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
                                         <div class="input-wrap">
-                                            <select name="" id="" class="nice-selection">
+                                            <select  name="People" required  id="" class="nice-selection">
                                                 <option value="0">No. of People</option>
-                                                <option value="1">100-200</option>
-                                                <option value="2">200-300</option>
-                                                <option value="3">300-400</option>
-                                                <option value="3">400-1000</option>
-                                                <option value="3">1000-5000</option>
-                                                <option value="3">5000 +</option>
+                                                <option value="100-200">100-200</option>
+                                                <option value="200-300">200-300</option>
+                                                <option value="300-400">300-400</option>
+                                                <option value="400-1000">400-1000</option>
+                                                <option value="1000-5000">1000-5000</option>
+                                                <option value="5000+">5000 +</option>
                                             </select>
                                         </div>
                                     </div>
                                     <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
                                         <div class="input-wrap">
-                                            <select name="" id="" class="nice-selection">
-                                                <option value="0">Vegetarian</option>
-                                                <option value="1">Non Vegeterian</option>
+                                            <select  name="Veg" required  id="" class="nice-selection">
+                                                <option value="Vegetarian">Vegetarian</option>
+                                                <option value="Non Vegeterian">Non Vegeterian</option>
                                             </select>
                                         </div>
                                     </div>
                                     <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
                                         <div class="input-wrap">
-                                            <input type="text" placeholder="Enter Contact No.">
+                                            <input type="text" placeholder="Enter Contact No."  name="Contact" required >
                                         </div>
                                     </div>
                                     <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
                                         <div class="input-wrap">
-                                            <input type="date" placeholder="Select Date">
+                                            <input type="date" placeholder="Select Date" name="Date" required >
                                         </div>
                                     </div>
                                     <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
                                         <div class="input-wrap">
-                                            <input type="text" placeholder="Enter Your Email">
+                                            <input type="text" placeholder="Enter Your Email" name="Email" required >
                                         </div>
                                     </div>
                                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 text-center">
-                                        <a href="javascript:void(0);" class="cat-btn">Send Request
-                                        </a>
+                                        <button type="submit" class="cat-btn">Send Request
+                                        </button>
                                     </div>
-                                </div>
+                                    <div class="mx-auto col-xl-10 col-lg-10 col-md-10 col-sm-12 col-12 text-center">
+                                        <div id="serviceFormResult">
+                                        </div>
+                                    </div>
+                                </form>
                             </div>
                         </div>
                     </div>
