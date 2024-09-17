@@ -1557,7 +1557,7 @@ body .search-field {
 /* Booking*/
 
 .cat-booking-wrapper {
-    background-image: url(../images/main/booking-bg.jpg);
+    /* background-image: url(../images/main/booking-bg.jpg); */
     background-position: center bottom;
     background-size: cover;
 }
