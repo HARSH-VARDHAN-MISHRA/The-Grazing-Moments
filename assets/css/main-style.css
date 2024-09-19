@@ -3309,3 +3309,31 @@ body .search-field {
         opacity: 0;
     }
 }
+
+/* ============== Harsh Styles ============ */
+
+.view-all{
+    text-align: center;
+    padding: 0.6rem 1.5rem;
+    color: white;
+    background: var(--cat-primary-color);
+    display: inline;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+@media only screen and (min-width: 782px){
+    .large-view{
+        display: block;
+    }
+    .small-view{
+        display: none;
+    }
+}
+@media only screen and (max-width: 782px){
+    .large-view{
+        display: none;
+    }
+    .small-view{
+        display: block;
+    }
+}
